@@ -81,7 +81,6 @@ app.get("/", (req, res) =>
 {
   var url = "mongodb://localhost:27017/messagerie";
   mongoose.connect(url);
-  //const uri = "mongodb+srv://anthony:de-Morais167@messagerie-s3rz9.mongodb.net/test?retryWrites=true";
   const client = new MongoClient(url, { useNewUrlParser: true });
   client.connect(err => {
     const collection = client.db("messagerie").collection("devices");
